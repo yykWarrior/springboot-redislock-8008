@@ -1,0 +1,22 @@
+redis:
+  cache:
+    clusterNodes: 192.168.100.102:7000,192.168.100.102:7001,192.168.100.102:7002,192.168.100.102:7003,192.168.100.102:7004,192.168.100.102:7005
+    prefix: ${spring.profiles.active}_
+    # 最大连接数, 默认8个
+    poolMaxTotal: 1000
+    # 连接池中的最大空闲连接
+    poolMaxIdle: 1000
+    # 执行命令超时时间
+    connectionTimeout: 5000
+    # 连接池最大阻塞等待时间（使用负值表示没有限制)
+    poolMaxWait: 1000
+    soTimeout: 5000
+    # # 重试次数
+    maxAttempts: 1000
+    password:
+    expireSeconds: 120
+    # 连接池最大连接数（使用负值表示没有限制
+    poolMaxActive: 50
+    poolTestOnBorrow: false
+    poolMinEvictableIdleTimeMillis: 30000
+    poolTimeBetweenEvictionRunsMillis: 1800000
